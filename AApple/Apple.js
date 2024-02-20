@@ -242,31 +242,32 @@ gsap.to("#page23>img",{
                     "https://www.apple.com/v/apple-vision-pro/c/images/overview/visionos/environment_white_sand__d9yi9qfevrue_medium.jpg",
                     "https://www.apple.com/v/apple-vision-pro/c/images/overview/visionos/environment_moon__cddspuen58eq_medium.jpg"];
 
-  let showImage = document.querySelector(".container");
-  let buttons = document.querySelectorAll(".btn");
-  let counter = 0;
 
-  buttons.forEach(function (button) {
-    button.addEventListener("click", function (e) {
-      if (button.classList.contains("btn-left")) {
-        counter--;
-        if (counter < 0) {
-          counter = pictures.length - 1;
-        }
-      } else if (button.classList.contains("btn-right")) {
-        counter++;
-        if (counter >= pictures.length) { // Corrected boundary check
-          counter = 0;
-        }
+ let showImage = document.querySelector(".container");
+let buttons = document.querySelectorAll(".btn");
+let counter = 0;
+
+// Set default image on page load
+showImage.style.backgroundImage = `url("/${pictures[counter]}.jpg")`;
+showImage.style.backgroundSize = "cover"; // Set object-fit for background image
+showImage.style.backgroundPosition = "center"; // Align image (optional)
+
+buttons.forEach(function (button) {
+  button.addEventListener("click", function (e) {
+    if (button.classList.contains("btn-left")) {
+      counter--;
+      if (counter < 0) {
+        counter = pictures.length - 1;
       }
+    } else if (button.classList.contains("btn-right")) {
+      counter++;
+      if (counter >= pictures.length) {
+        counter = 0;
+      }
+    }
 
-        showImage.style.backgroundImage = `url("${pictures[counter]}")`;
-      showImage.style.backgroundSize = "cover"; // Set object-fit for background image
-      showImage.style.backgroundPosition = "center"; // Align image (optional)
-    });
+    showImage.style.backgroundImage = `url("/${pictures[counter]}.jpg")`;
+    showImage.style.backgroundSize = "cover"; // Set object-fit for background image
+    showImage.style.backgroundPosition = "center"; // Align image (optional)
   });
-
-
-
-
-
+});
