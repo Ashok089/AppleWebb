@@ -491,7 +491,7 @@
 }
 #center-page15{
     height: 90%;
-    width: 95%;
+    width: 100%;
     position: relative;
     overflow: hidden;
 }
@@ -583,7 +583,7 @@
     width:150vh;
     background-size: cover;
     margin-top:150px;
-    margin-left: 170px;
+    margin-left: 200px;
     transition: 1s;
     margin-bottom: 100px;
 }
