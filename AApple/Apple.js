@@ -238,7 +238,9 @@ gsap.to("#page23>img",{
 
 
 
-  const pictures = ["l2", "l3", "l4"];
+  const pictures = ["https://www.apple.com/v/apple-vision-pro/c/images/overview/visionos/environment_mt_hood__bowcnbltk57m_medium.jpg", 
+                    "https://www.apple.com/v/apple-vision-pro/c/images/overview/visionos/environment_white_sand__d9yi9qfevrue_medium.jpg",
+                    "https://www.apple.com/v/apple-vision-pro/c/images/overview/visionos/environment_moon__cddspuen58eq_medium.jpg"];
 
   let showImage = document.querySelector(".container");
   let buttons = document.querySelectorAll(".btn");
@@ -258,7 +260,7 @@ gsap.to("#page23>img",{
         }
       }
 
-      showImage.style.backgroundImage = `url("/${pictures[counter]}.jpg")`;
+        showImage.style.backgroundImage = `url("${pictures[counter]}")`;
       showImage.style.backgroundSize = "cover"; // Set object-fit for background image
       showImage.style.backgroundPosition = "center"; // Align image (optional)
     });
