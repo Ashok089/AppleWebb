@@ -570,20 +570,18 @@
     color: #fff;
 }
 
-  .container {
-            position: relative;
-            background-image: url("");
-            border: solid 4px white ;
-            height: 70vh;
-            width: 150vh;
-            background-size: cover;
-            margin-top: 150px;
-            margin-left: auto;
-            margin-right: auto;
-            transition: 1s;
-            margin-bottom: 100px;
-        }
-
+.container {
+    position: relative;
+    border: solid 4px white ;
+    height: 70vh;
+    width: 150vh;
+    background-size: cover;
+    margin-top: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    transition: 1s;
+    margin-bottom: 100px;
+}
         .btn {
             position: absolute;
             font-size: 50px;
