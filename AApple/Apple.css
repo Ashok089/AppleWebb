@@ -570,50 +570,42 @@
     color: #fff;
 }
 
+  .container {
+            position: relative;
+            background-image: url("/l2.jpg");
+            border: solid 4px white ;
+            height: 70vh;
+            width: 150vh;
+            background-size: cover;
+            margin-top: 150px;
+            margin-left: auto;
+            margin-right: auto;
+            transition: 1s;
+            margin-bottom: 100px;
+        }
+
+        .btn {
+            position: absolute;
+            font-size: 50px;
+            padding: 5px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: black;
+            cursor: pointer;
+            background-color: rgba(255, 255, 255, 0.5);
+            border-radius: 10px;
+        }
+
+        .btn-left {
+            left: 20px;
+        }
+
+        .btn-right {
+            right: 20px;
+        }
 
 
 
-
-.container
-{ 
-    position: relative;
-    background-image: url("/l2.jpg");
-    border: solid 4px white ;
-    height:70vh;
-    width:150vh;
-    background-size: cover;
-    margin-top:150px;
-    transition: 1s;
-    margin-bottom: 100px;
-}
-
-.btn-left
-{
-    position: absolute;
-    font-size: 50px;
-    padding: 5px;
-    top:40%;
-    left:7%;
-    transform: translateX(-60px);
-    border-radius:10px;
-    color:black;
-    cursor:pointer;
-}
-
-.btn-right
-{
-    position: absolute;
-    font-size: 50px;
-    padding: 5px;
-    top:40%;
-    right:7%;
-    transform: translateX(60px);
-    border-radius:10px;
-    color:black;
-    cursor:pointer;
-
-
-}
 
 #page18
 {
