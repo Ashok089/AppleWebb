@@ -583,7 +583,7 @@
     width:150vh;
     background-size: cover;
     margin-top:150px;
-    margin-left: 200px;
+    margin-left: 100px;
     transition: 1s;
     margin-bottom: 100px;
 }
@@ -678,7 +678,7 @@ width:22%;
 #page9>video
 {
   height: 100%;
-  width:200%;
+  width:100%;
   object-fit: cover;
 }
 
