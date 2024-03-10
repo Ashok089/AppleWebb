@@ -677,8 +677,9 @@ width:22%;
 #page9>video
 {
   height: 100%;
-  width:100%;
+  width:250%;
   object-fit: cover;
+    
 }
 
 #page9text
