@@ -248,26 +248,32 @@ let buttons = document.querySelectorAll(".btn");
 let counter = 0;
 
 // Set default image on page load
-showImage.style.backgroundImage = `url("/${pictures[counter]}.jpg")`;
-showImage.style.backgroundSize = "cover"; // Set object-fit for background image
-showImage.style.backgroundPosition = "center"; // Align image (optional)
+   let showImage = document.querySelector(".container");
+        let buttons = document.querySelectorAll(".btn");
+        let pictures = ["image1", "image2", "image3"]; // Array of image names
+        let counter = 0;
 
-buttons.forEach(function (button) {
-  button.addEventListener("click", function (e) {
-    if (button.classList.contains("btn-left")) {
-      counter--;
-      if (counter < 0) {
-        counter = pictures.length - 1;
-      }
-    } else if (button.classList.contains("btn-right")) {
-      counter++;
-      if (counter >= pictures.length) {
-        counter = 0;
-      }
-    }
+        // Set default image on page load
+        showImage.style.backgroundImage = `url("/${pictures[counter]}.jpg")`;
+        showImage.style.backgroundSize = "cover"; // Set object-fit for background image
+        showImage.style.backgroundPosition = "center"; // Align image (optional)
 
-    showImage.style.backgroundImage = `url("/${pictures[counter]}.jpg")`;
-    showImage.style.backgroundSize = "cover"; // Set object-fit for background image
-    showImage.style.backgroundPosition = "center"; // Align image (optional)
-  });
-});
+        buttons.forEach(function (button) {
+            button.addEventListener("click", function (e) {
+                if (button.classList.contains("btn-left")) {
+                    counter--;
+                    if (counter < 0) {
+                        counter = pictures.length - 1;
+                    }
+                } else if (button.classList.contains("btn-right")) {
+                    counter++;
+                    if (counter >= pictures.length) {
+                        counter = 0;
+                    }
+                }
+
+                showImage.style.backgroundImage = `url("/${pictures[counter]}.jpg")`;
+                showImage.style.backgroundSize = "cover"; // Set object-fit for background image
+                showImage.style.backgroundPosition = "center"; // Align image (optional)
+            });
+        });
