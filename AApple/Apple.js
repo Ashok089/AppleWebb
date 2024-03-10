@@ -238,25 +238,16 @@ gsap.to("#page23>img",{
 
 
 
-  const pictures = ["https://www.apple.com/v/apple-vision-pro/c/images/overview/visionos/environment_mt_hood__bowcnbltk57m_medium.jpg", 
-                    "https://www.apple.com/v/apple-vision-pro/c/images/overview/visionos/environment_white_sand__d9yi9qfevrue_medium.jpg",
-                    "https://www.apple.com/v/apple-vision-pro/c/images/overview/visionos/environment_moon__cddspuen58eq_medium.jpg"];
 
+const pictures = [
+            "https://www.apple.com/v/apple-vision-pro/c/images/overview/visionos/environment_mt_hood__bowcnbltk57m_medium.jpg", 
+            "https://www.apple.com/v/apple-vision-pro/c/images/overview/visionos/environment_white_sand__d9yi9qfevrue_medium.jpg",
+            "https://www.apple.com/v/apple-vision-pro/c/images/overview/visionos/environment_moon__cddspuen58eq_medium.jpg"
+        ];
 
- let showImage = document.querySelector(".container");
-let buttons = document.querySelectorAll(".btn");
-let counter = 0;
-
-// Set default image on page load
-   let showImage = document.querySelector(".container");
+        let showImage = document.querySelector(".container");
         let buttons = document.querySelectorAll(".btn");
-        let pictures = ["image1", "image2", "image3"]; // Array of image names
         let counter = 0;
-
-        // Set default image on page load
-        showImage.style.backgroundImage = `url("/${pictures[counter]}.jpg")`;
-        showImage.style.backgroundSize = "cover"; // Set object-fit for background image
-        showImage.style.backgroundPosition = "center"; // Align image (optional)
 
         buttons.forEach(function (button) {
             button.addEventListener("click", function (e) {
@@ -272,7 +263,7 @@ let counter = 0;
                     }
                 }
 
-                showImage.style.backgroundImage = `url("/${pictures[counter]}.jpg")`;
+                showImage.style.backgroundImage = `url("${pictures[counter]}")`;
                 showImage.style.backgroundSize = "cover"; // Set object-fit for background image
                 showImage.style.backgroundPosition = "center"; // Align image (optional)
             });
